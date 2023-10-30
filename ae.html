@@ -1,0 +1,40 @@
+<style>
+  .scrolling-div {
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+  
+  .scrolling-div img {
+    display: inline-block;
+    margin: 0 10px;
+    width: 90px; /* Largura das miniaturas */
+    height: 160px; /* Altura das miniaturas */
+    object-fit: cover; /* Redimensiona e corta a imagem para caber no contêiner */
+  }
+</style>
+<div class="scrolling-div" style="width: 100%; overflow: hidden; white-space: nowrap;">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiko6TKKX1HHyYg17mGkzGsnXnm7ff2e1vKE4KWU8BqmGl8Yn7b10Sn-EEgsFyE0YIYRDZru-A4Ku9oUyzq_SaVSfnF16gdK9cS86E5g5NMo77gmSCgmAm82HKkJ7b-oT-1GjzxaC9ptKGqPJqowFak5ImSy_0G2oeCmHBhwHlTEQb92oZw_8dMCfhIzCo/w167-h200/01.jpg" width="160">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBrbtPpfDeAxy9_2hyOjS4Gugi4Lq6HX_vJgyOYmJf38eVIetYfE9LXR7wSI0w-WnglvL1Cdp4D8uoyz9ijat5YwYNwjjhmbRpbeZHgMTsW9k3e_iEJSHpjsadgSzuKGwohyphenhyphenYxKt9KFPtLSlCw-ylOE-45KUsJFkHK6S9njGf54mWHtn1Od1kqxTpynRI/w154-h200/02.jpg" width="160">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiERtvbCTRyyba4iBE4XpQ0qIE3nrCGTR7dhXZTcYYWI-5XwwRfD38VjiMRC40y7viGwW5vlj37URMSQkOZ7ewgFL76I09jPcrRdGLUUgM1Z2cnMYJPttWEZ8LASl2Vic4-oBApWUNonuoeOrbJW-PytUnQgtkoqGjGueUUDNmBO6npaw9iIeze30DSIA/w162-h200/03.jpg" width="160">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhc4LTVTERRvwzP1jO26wJGxKtvJofCN27LSYJKZ-bIPOkjnrAkoY9n9Z5S0piZ7fbLqpFzGo2kgLpp-7Pdq2Kc5_viv4yqoT9NdcilURytTlNPuc-vmQWiFJ4hD7tpq33ym94QQHxDIfo1p6arxE_6qj0CRyRa-GwJrJ78xvgtxFP1qOh4i_AXzttuciQ/w160-h200/04.jpg" width="160">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhLZSAYB4z8uXRwjRPdj-tcgb1J1zhVfVRjDxdvg7iG_-vSA-LYfsldh-ukvQtlY5EXPTl0CgTYxjj2DJzSCchhLQsg-O_4-4gDbxGazvh3_iL1E8EiLU8YUR9mOafHbsaDlpEylhYqGeXfFFng4MGQ2b-HLTjxbGFulE2KI6C7NPEfyrYRsj9S4wby2I4/w159-h200/05.jpg" width="160">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-L3zI15m_qG5fq8ZMLVS8AljM6iFxVlQOhDtygT8IL_hvfK5BlsER5geCg9T8mg7cPNjEbppmV-8-VdC3igGVeSUvz3xfymplwFqjj3xxPK6cbwr_lB5MMwh6zRUYk50xuwABmEUXsI2u7NFC0iwONUZ_xQHaZWcDw70PhPeyUYNG0mTHLIt2Y8KxY7Q/w142-h200/06.jpg" width="160">
+  <!-- Adicione o resto das imagens aqui -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(".scrolling-div").swipe({
+      swipeStatus: function(event, phase, direction, distance, duration) {
+        if (phase == "move" && (direction == "left" || direction == "right")) {
+          var scrollAmount = direction == "left" ? "+=10px" : "-=10px";
+          $(".scrolling-div").animate({
+            scrollLeft: scrollAmount
+          }, 1);
+        }
+      }
+    });
+  });
+</script>
