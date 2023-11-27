@@ -3,13 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sun Tzu explica como adaptar-se às mudanças do inimigo e do ambiente, usando a flexibilidade e a criatividade para obter vantagem. Ele ensina a usar o fogo, a água e o terreno como armas estratégicas.">
-    <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
+  <meta name="description" content="Sun Tzu explica como adaptar-se às mudanças do inimigo e do ambiente, usando a flexibilidade e a criatividade para obter vantagem. Ele ensina a usar o fogo, a água e o terreno como armas estratégicas.">
+  <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34=">
 	<title>Capitulo 8 - Da arte das mudanças</title>
   <link rel="canonical" href="cap8.html">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
 	<header>
@@ -68,10 +69,10 @@
 					  <a class="nav-link text-sm" href="cap13.html">Da Arte de semear discórdia</a>
 					</li>
 				  </ul>
-				  <form class="d-flex mt-3" role="search">
-					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-secondary" type="submit">Search</button>
-				  </form>
+				  <form class="d-flex mt-3" role="search" onsubmit="redirecionarBusca(); return false;">
+            <input id="termoBusca" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-secondary" type="submit">Search</button>
+          </form>
 				</div>
 			  </div>
 			</div>
